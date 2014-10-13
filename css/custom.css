@@ -1,0 +1,90 @@
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+i {
+	padding: 8px;
+}
+.tay-header {
+	background: #000;
+	color: #FFF;
+	width: 100%;
+}
+
+.tay-header a {
+	color: #FFF;
+}
+
+.tay-header-inverse {
+	background: #FFF;
+	color: #000;
+	width: 100%;
+}
+
+.tay-header-inverse a {
+	color: #000;
+}
+
+.dates {
+	font-size: 24px;
+	text-align: center;
+	padding: 20px 0;
+}
+
+.flowplayer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.flowplayer-wrapper {
+	width: 100%;
+	height: 100%;
+}
+
+.flowplayer video {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+
+#map {
+	height: 100%;
+}
+
+.leaflet-popup {
+	max-width: 250px;
+}
+
+#map a {
+	color: #000;
+}
+
+#map h2 {
+	font-weight: bold;
+	font-style: italic;
+}
+
+#map a:hover {
+	color: #CCC;
+}
+
+.stream {
+	background: #333;
+}
+
+.modal-content {
+	border-radius: 0;
+}

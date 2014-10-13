@@ -1,0 +1,117 @@
+ { "type" : "Feature Collection",
+    {"features" : [
+         { "type" : "Feature",
+	"geometry" : {
+                "type" : "Point",
+                "coordinates" : [-0.175008, 51.504727]
+        },
+        "properties" : {
+        	"name" : "Decades of destruction, Mass Media Today and Today ",
+        	"location" : "Serpentine Gallery",
+        	"year" : "2009",
+        	"url" : "http://www.serpentinegalleries.org/exhibitions-events/gustav-metzger-decades-1959%E2%80%932009",
+        	"address" : "Kensington Gardens, London W2 3XA",
+
+        	}
+        },
+         { "type" : "Feature",
+	"geometry" : {
+                "type" : "Point",
+                "coordinates" : [-73.98249, 40.714459]
+        },
+        "properties" : {
+        	"name" : "MASS MEDIA: Today and Yesterday (2011)",
+        	"location" : "e-flux",
+        	"year" : "2011",
+        	"url" : "http://www.e-flux.com/program/gustav-metzger%E2%80%A8/",
+        	"address" : "41 Essex Street, New York, NY 10002",
+
+        	}
+        },
+         { "type" : "Feature",
+	"geometry" : {
+                "type" : "Point",
+                "coordinates" : [73.99289, 40.722338]
+        },
+        "properties" : {
+        	"name" : "Gustav Metzger: Historic Photographs",
+        	"location" : "New Museum ",
+        	"year" : "2011",
+        	"url" : "http://archive.newmuseum.org/index.php/Detail/Occurrence/Show/occurrence_id/1389",
+        	"address" : "235 Bowery, NYC",
+
+        	}
+        },
+         { "type" : "Feature",
+	"geometry" : {
+                "type" : "Point",
+                "coordinates" : [16.3664509, 48.1964203]
+        },
+        "properties" : {
+        	"name" : "GUSTAV METZGER / GERHARD RUHM, Mass Media / Media Mess",
+        	"location" : "Christine Koenig Galerie",
+        	"year" : "2013",
+        	"url" : "http://www.christinekoeniggalerie.com/id-2013-details-178/items/gustav-metzger-gerhard-ruehm.html",
+        	"address" : "Schleifmuehlgasse 1A, 1040 Vienna, Austria",
+
+        	}
+        },
+         { "type" : "Feature",
+	"geometry" : {
+                "type" : "Point",
+                "coordinates" : [18.600788, 53.011979]
+        },
+        "properties" : {
+        	"name" : "Arena",
+        	"location" : "Centre of Contemporary Art Znaki Czasu",
+        	"year" : "2014",
+        	"url" : "http://www.csw.torun.pl/exhibitions/exhibitions-db/arena",
+        	"address" : "87-100 Torun, Waly gen. Sikorskiego 13, Poland",
+
+        	}
+        },
+         { "type" : "Feature",
+	"geometry" : {
+                "type" : "Point",
+                "coordinates" : [47.072751, 15.436075]
+        },
+        "properties" : {
+        	"name" : "Liquid Assets",
+        	"location" : "Ausstellung steirischer herbst",
+        	"year" : "2014",
+        	"url" : "http://www.gat.st/en/date/steirischer-herbst-2013-ausstellungseroeffnungen",
+        	"address" : "Sackstra??e 17, 8010 Graz, Austria",
+
+        	}
+        },
+         { "type" : "Feature",
+	"geometry" : {
+                "type" : "Point",
+                "coordinates" : [51.215647, -0.80463]
+        },
+        "properties" : {
+        	"name" : "Facing Extinction: Gustav Metzger",
+        	"location" : "James Hockey Gallery, UCA Farnham",
+        	"year" : "2014",
+        	"url" : "http://www.ucreative.ac.uk/galleries/james-hockey/2014/gustav-metzger",
+        	"address" : "University for the Creative Arts, Faulkner Road, Farnham, Surrey GU9 7DS",
+
+        	}
+        },
+         { "type" : "Feature",
+	"geometry" : {
+                "type" : "Point",
+                "coordinates" : [51.2751198, 1.0908408]
+        },
+        "properties" : {
+        	"name" : "Gustav Metzger, Facing Extinction",
+        	"location" : "The Herbert Read Gallery",
+        	"year" : "2014",
+        	"url" : "http://www.ucreative.ac.uk/galleries/herbert-read/upcoming-exhibitions",
+        	"address" : "Herbert Read Gallery UCA Canterbury New Dover Road Canterbury Kent CT1 3AN",
+
+        	}
+        },
+         ]
+}
+    
