@@ -16,101 +16,77 @@
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		<link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
 		<!--[if lt IE 9]>
+<<<<<<< HEAD
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<link href="css/custom.css" rel="stylesheet">
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
 
 	</head>
+
+	</head>
+
+
 	<body>
-		<div class="tay-header">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-2 text-center">
-						<a href="index.html"><i class="fa fa-play fa-1x"></i></a>
-						<a href="map.html"><i class="fa fa-compass fa-1x"></i></a>
-						<a href="" data-toggle="modal" data-target="#information"><i class="fa fa-list fa-1x"></i></a>
-					</div>
-					<div class="col-sm-8 text-center">
-						<span class="dates text-center">18/10/2014 &ndash; 19/10/2014</span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--<div data-swf="//releases.flowplayer.org/5.5.0/flowplayer.swf"
-			class="flowplayer"
-			 data-ratio="0.416">
-			
-			<video>
-			<source type="video/webm" src="http://stream.flowplayer.org/bauhaus.webm">
-			<source type="video/mp4" src="http://stream.flowplayer.org/bauhaus.mp4">
-			<source type="video/ogv" src="http://stream.flowplayer.org/bauhaus.ogv">
-			</video>
-			</div>-->
-		<!-- Modal -->
-		<div class="container">
-			<div id="countdown" class="text-center"></div>
-		</div>
-		<div class="container">
-		<div id="tay-packery">
 
-			<div class="item">
-				<img src="http://placehold.it/400x300/333/FFF">
-			</div>
-			<div class="item">
-				<img src="http://placehold.it/400x300/000/FFF">
-			</div>
-			<div class="item w2">
-				<img src="http://placehold.it/400x300/EEE/FFF">
-			</div>
-			<div class="item w2">
-				<img src="http://placehold.it/400x300/CCC/FFF">
-			</div>
 
-			<div class="item w2">
-				<img src="http://placehold.it/400x300/000/FFF">
-			</div>
-			<div class="item w3">
-				<img src="http://placehold.it/400x300/000/FFF">
-			</div>
-			<div class="item w3">
-				<img src="http://placehold.it/400x300/000/FFF">
-			</div>
-			<div class="item w3">
-				<img src="http://placehold.it/400x300/000/FFF">
-			</div>
-		</div>
-	</div>
+					<div id="tay-packery-archive">
+						<div class="item">
+							<img src="http://placehold.it/400x300/333/FFF">
+						</div>
+						<div class="item">
+							<img src="http://placehold.it/400x300/000/FFF">
+						</div>
+						<div class="item w2">
+							<img src="http://placehold.it/400x300/EEE/FFF">
+						</div>
+						<div class="item w2">
+							<img src="http://placehold.it/400x300/CCC/FFF">
+						</div>
 
-		<!-- Modal -->
-		<div class="modal fade" id="information" tabindex="-1" role="dialog" aria-labelledby="informationLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-						<h2 class="modal-title" id="informationLabel">Information</h2>
+						<div class="item w2">
+							<img src="http://placehold.it/400x300/000/FFF">
+						</div>
+						<div class="item w5">
+							<img src="http://placehold.it/400x300/000/FFF">
+						</div>
+						<div class="item w5">
+							<img src="http://placehold.it/400x300/000/FFF">
+						</div>
+						<div class="item w5">
+							<img src="http://placehold.it/400x300/000/FFF">
+						</div>
+						<div class="item w5">
+							<img src="http://placehold.it/400x300/000/FFF">
+						</div>
+						<div class="item w5">
+							<img src="http://placehold.it/400x300/000/FFF">
+						</div>
 					</div>
-					<div class="modal-body">
-						...
-					</div>
-				</div>
-			</div>
 		</div>
+
 
 		<!-- Bootstrap core JavaScript
 			================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 		<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 		
 		<script src="js/packery.pkgd.min.js"></script>
 		<script>
-		var $container = $('#tay-packery');
-		// init
-		$container.packery({
+
+		var container = document.querySelector('#tay-packery-archive');
+		var archive = new Packery( container, {
+		  // options
 		  itemSelector: '.item',
 		  gutter: 0
 		});
+
+		archive.layout();
 		</script>
 
 
@@ -137,38 +113,5 @@
 			ga('send', 'pageview');
 		</script>
 
-
-		<script type="text/javascript">
-		// set the date we're counting down to
-		var target_date = new Date("Oct 18, 2014").getTime();
-
-		// variables for time units
-		var days, hours, minutes, seconds;
-
-		// get tag element
-		var countdown = document.getElementById("countdown");
-
-		// update the tag with id "countdown" every 1 second
-		setInterval(function () {
-
-		// find the amount of "seconds" between now and target
-		var current_date = new Date().getTime();
-		var seconds_left = (target_date - current_date) / 1000;
-
-		// do some time calculations
-		days = parseInt(seconds_left / 86400);
-		seconds_left = seconds_left % 86400;
-
-		hours = parseInt(seconds_left / 3600);
-		seconds_left = seconds_left % 3600;
-
-		minutes = parseInt(seconds_left / 60);
-		seconds = parseInt(seconds_left % 60);
-
-		// format countdown string + set tag value
-		countdown.innerHTML = "<h3>" + days + " days, " + hours + " hours, and "
-		+ minutes + " minutes until the next Mass Media transmission.</h3>";
-		}, 1000);
-		</script>
 	</body>
 </html>
