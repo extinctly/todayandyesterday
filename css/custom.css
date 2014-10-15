@@ -94,10 +94,10 @@ i {
 	width: 100%;
 }
 .leaflet-popup-content {
-	padding: 0;
+	padding: 0 !important;
 }
 .leaflet-popup-content-wrapper {
-	padding: 0;
+	padding: 0 !important;
 }
 .leaflet-text {
 	padding: 10px;
