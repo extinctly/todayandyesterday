@@ -25,70 +25,68 @@
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 
+		<!-- player skin -->
+		<link rel="stylesheet" type="text/css"
+			href="//releases.flowplayer.org/5.5.0/skin/minimalist.css">
+		<style>
+			/* custom player skin */
+			.flowplayer { width: 100%; height: 100%; background-color: #222; background-size: cover; }
+			.flowplayer .fp-controls { background-color: rgba(0, 0, 0, 0.1)}
+			.flowplayer .fp-timeline { background-color: rgba(0, 0, 0, 0.1)}
+			.flowplayer .fp-progress { background-color: rgba(0, 0, 0, 1)}
+			.flowplayer .fp-buffer { background-color: rgba(249, 249, 249, 1)}
+		</style>
+		<!-- flowplayer depends on jQuery 1.7.1+ -->
+		<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+		<!-- flowplayer javascript component -->
+		<script src="//releases.flowplayer.org/5.5.0/flowplayer.min.js"></script>
 	</head>
 
 	</head>
 
 
-	<body class="stream">
-
-			<div id="tay-packery-archive">
-				<div id="mm1" class="item w1">
-					<img src="img/mm_01.jpg">
-				</div>
-				<div id="mm2" class="item w2">
-					<img src="img/mm_02.jpg">
-				</div>
-				<div id="mms1" class="item w4">
-					<img src="img/mms_01.JPG">
-				</div>
-				<div id="mms2" class="item w4">
-					<img src="img/mms_02.JPG">
-				</div>
-				<div id="mms3" class="item w4">
-					<img src="img/mms_03.JPG">
-				</div>
-				<div id="mms4" class="item w4">
-					<img src="img/mms_04.JPG">
-				</div>
-				<div id="mm3" class="item w2">
-					<img src="img/mm_03.jpg">
-				</div>
-				<div id="mm1a" class="item w1">
-					<img src="img/mm_01.jpg">
-				</div>
-				<div id="mm2a" class="item w2">
-					<img src="img/mm_02.jpg">
-				</div>
-				<div id="mms1a" class="item w4">
-					<img src="img/mms_01.JPG">
-				</div>
-				<div id="mms2a" class="item w4">
-					<img src="img/mms_02.JPG">
-				</div>
-				<div id="mm3a" class="item w1">
-					<img src="img/mm_03.jpg">
+	<body>
+		<div class="tay-header">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2 text-center">
+						<a href="index.html"><i class="fa fa-play fa-1x"></i></a>
+						<a href="map.html"><i class="fa fa-compass fa-1x"></i></a>
+						<a href="" data-toggle="modal" data-target="#information"><i class="fa fa-info fa-1x"></i></a>
+					</div>
+					<div class="col-sm-2 col-sm-offset-3 text-center">
+						<span class="dates text-center">18/10/2014</span>
+					</div>
 				</div>
 			</div>
 		</div>
 
+		<div class="archive-images">
+			<img src="img/mm_01.jpg">
+			<img src="img/mm_01.jpg">
+		</div>
+
 	    <div class="footer">
 			<div class="container">
-				<div class="row">
-					<div class="col-sm-2 text-center">
-						<a href="index.html"><i class="fa fa-long-arrow-left fa-1x"></i></a>
-					</div>
-					<div class="col-sm-8 text-center">
-						<span class="dates text-center">ARCHIVE 18/10/2014</span>
-					</div>
-					<div class="col-sm-2 text-center">
-						<a id ="zoom" data-toggle="tooltip" title="Click and drag images to zoom."><i class="fa fa-search fa-1x"></i></a>
-					</div>
-				</div>
+				<div class="pull-left"><i class="fa fa-step-backward"></i></div>
+				<div class="pull-right"><i class="fa fa-step-forward"></i></div>
 			</div>
 	    </div>
 
-
+		<!-- Modal -->
+		<div class="modal fade" id="information" tabindex="-1" role="dialog" aria-labelledby="informationLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h2 class="modal-title" id="informationLabel">Information</h2>
+					</div>
+					<div class="modal-body">
+						...
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<!-- Bootstrap core JavaScript
 			================================================== -->
@@ -96,97 +94,6 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 		<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 		
-		<script src="js/packery.pkgd.min.js"></script>
-		<script>
-
-		var container = document.querySelector('#tay-packery-archive');
-		var archive = new Packery( container, {
-		  // options
-		  itemSelector: '.item',
-		  gutter: 0
-		});
-
-		archive.layout();
-		</script>
-
-		<!-- jQuery zoom -->
-		<script src="bower_components/jquery-zoom/jquery.zoom.min.js"></script>
-
-		<script>
-		// Example:
-		$(document).ready(function(){
-		  	$('#mm1').zoom({
-		  		url: 'img/mm_01.jpg',
-		  		on: 'grab',
-		  		magnify: 2,
-		  	});
-
-		  	$('#mm2').zoom({
-		  		url: 'img/mm_02.jpg',
-		  		on: 'grab',
-		  		magnify: 1,
-		  	});
-		  	$('#mm3').zoom({
-		  		url: 'img/mm_03.jpg',
-		  		on: 'grab',
-		  		magnify: 1,
-		  	});
-		  	$('#mm4').zoom({
-		  		url: 'img/mm_04.jpg',
-		  		on: 'grab',
-		  		magnify: 2,
-		  	});		  	
-		  	$('#mms1').zoom({
-		  		url: 'img/mms_01.jpg',
-		  		on: 'grab',
-		  		magnify: 1,
-		  	});
-		  	$('#mms2').zoom({
-		  		url: 'img/mms_02.jpg',
-		  		on: 'grab',
-		  		magnify: 2,
-		  	});
-		  	$('#mms3').zoom({
-		  		url: 'img/mms_03.jpg',
-		  		on: 'grab',
-		  		magnify: 1,
-		  	});
-		  	$('#mms4').zoom({
-		  		url: 'img/mms_04.jpg',
-		  		on: 'grab',
-		  		magnify: 2,
-		  	});
-		  	$('#mm1a').zoom({
-		  		url: 'img/mm_01.jpg',
-		  		on: 'grab',
-		  		magnify: 2,
-		  	});
-		  	$('#mm2a').zoom({
-		  		url: 'img/mm_02.jpg',
-		  		on: 'grab',
-		  		magnify: 2,
-		  	});
-		  	$('#mms1a').zoom({
-		  		url: 'img/mms_01.jpg',
-		  		on: 'grab',
-		  		magnify: 2,
-		  	});
-		  	$('#mms2a').zoom({
-		  		url: 'img/mms_02.jpg',
-		  		on: 'grab',
-		  		magnify: 1,
-		  	});
-		  	$('#mm3a').zoom({
-		  		url: 'img/mm_03.jpg',
-		  		on: 'grab',
-		  		magnify: 1,
-		  	});
-		});
-
-
-		$('#zoom').tooltip();
-		</script>
-
 
 		<!-- Extinct.ly analytics -->
 		<script>

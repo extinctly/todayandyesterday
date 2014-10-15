@@ -16,7 +16,6 @@
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		<link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
 		<!--[if lt IE 9]>
-<<<<<<< HEAD
 		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<link href="css/custom.css" rel="stylesheet">
@@ -52,10 +51,13 @@
 					<div class="col-sm-2 text-center">
 						<a href="index.html"><i class="fa fa-play fa-1x"></i></a>
 						<a href="map.html"><i class="fa fa-compass fa-1x"></i></a>
-						<a href="" data-toggle="modal" data-target="#information"><i class="fa fa-list fa-1x"></i></a>
+						<a href="" data-toggle="modal" data-target="#information"><i class="fa fa-info fa-1x"></i></a>
 					</div>
-					<div class="col-sm-8 text-center">
-						<span class="dates text-center">18/10/2014 &ndash; 19/10/2014</span>
+					<div class="col-sm-2 col-sm-offset-2 text-center">
+						<span class="dates text-center">18/10/2014</span>
+					</div>
+					<div class="col-sm-2 text-center">
+						<span class="dates text-center">19/10/2014</span>
 					</div>
 				</div>
 			</div>
@@ -73,9 +75,6 @@
 
 		<div class="container text-center">
 			<div id="countdown"></div>
-
-			<a href="archive.html"><button class="btn btn-default">ARCHIVE</button></a>
-
 		</div>
 
 		<!-- Modal -->
@@ -161,8 +160,8 @@
 		seconds = parseInt(seconds_left % 60);
 
 		// format countdown string + set tag value
-		countdown.innerHTML = "<h3>" + days + " days, " + hours + " hours, and "
-		+ minutes + " minutes until the next Mass Media transmission.</h3>";
+		countdown.innerHTML = "<h2>" + days + " DAYS, " + hours + " HOURS AND "
+		+ minutes + " MINUTES</h2><br><h2>until the next Mass Media transmission.</h2>";
 		}, 1000);
 		</script>
 	</body>

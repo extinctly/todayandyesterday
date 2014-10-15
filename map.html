@@ -18,6 +18,8 @@
         <!--[if lt IE 9]>
         <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
+        <!-- Map specific styles -->
+        <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.0/mapbox.css' rel='stylesheet' />
         <link href="css/custom.css" rel="stylesheet">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -43,15 +45,15 @@
                     <div class="col-sm-2 text-center">
                         <a href="index.html"><i class="fa fa-play fa-1x"></i></a>
                         <a href="map.html"><i class="fa fa-compass fa-1x"></i></a>
-                        <a href="" data-toggle="modal" data-target="#information"><i class="fa fa-list fa-1x"></i></a>
+                        <a href="" data-toggle="modal" data-target="#information"><i class="fa fa-info fa-1x"></i></a>
                     </div>
                     <div class="col-sm-8 text-center">
-                        <span class="dates text-center">MASS MEDIA</span>
+                        <span class="dates text-center">MASS MEDIA: todayandyesterday.co.uk</span>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="map" style="width:100%; height: 450px;"></div>
+        <div id="map" style="width:100%; height: 500px;"></div>
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
@@ -77,6 +79,7 @@
                         "location" : "Serpentine Gallery",
                         "year" : "2009",
                         "url" : "http://www.serpentinegalleries.org/exhibitions-events/gustav-metzger-decades-1959%E2%80%932009",
+                        "img": "img/thumbnails/serpentine.jpg",
                         "address" : "Kensington Gardens, London W2 3XA",
             
                         }
@@ -91,6 +94,7 @@
                         "location" : "e-flux",
                         "year" : "2011",
                         "url" : "http://www.e-flux.com/program/gustav-metzger%E2%80%A8/",
+                        "img": "img/thumbnails/eflux.jpg",
                         "address" : "41 Essex Street, New York, NY 10002",
             
                         }
@@ -98,20 +102,7 @@
                      { "type" : "Feature",
                 "geometry" : {
                             "type" : "Point",
-                            "coordinates" : [73.99289, 40.722338]
-                    },
-                    "properties" : {
-                        "name" : "Gustav Metzger: Historic Photographs",
-                        "location" : "New Museum",
-                        "year" : "2011",
-                        "url" : "http://archive.newmuseum.org/index.php/Detail/Occurrence/Show/occurrence_id/1389",
-                        "address" : "235 Bowery, NYC",
-            
-                        }
-                    },
-                     { "type" : "Feature",
-                "geometry" : {
-                            "type" : "Point",
+                  "type" : "Point",
                             "coordinates" : [16.3664509, 48.1964203]
                     },
                     "properties" : {
@@ -119,6 +110,7 @@
                         "location" : "Christine Koenig Galerie",
                         "year" : "2013",
                         "url" : "http://www.christinekoeniggalerie.com/id-2013-details-178/items/gustav-metzger-gerhard-ruehm.html",
+                        "img": "img/thumbnails/christine_koenig.jpg",
                         "address" : "Schleifmuehlgasse 1A, 1040 Vienna, Austria",
             
                         }
@@ -133,6 +125,7 @@
                         "location" : "Centre of Contemporary Art Znaki Czasu",
                         "year" : "2014",
                         "url" : "http://www.csw.torun.pl/exhibitions/exhibitions-db/arena",
+                        "img": "img/thumbnails/znaki_czasu.jpg",
                         "address" : "87-100 Torun, Waly gen. Sikorskiego 13, Poland",
             
                         }
@@ -140,15 +133,15 @@
                      { "type" : "Feature",
                 "geometry" : {
                             "type" : "Point",
-                            "coordinates" : [47.072751, 15.436075]
+                            "coordinates" : [ 15.436075, 47.072751]
                     },
                     "properties" : {
                         "name" : "Liquid Assets",
                         "location" : "Ausstellung steirischer herbst",
                         "year" : "2014",
                         "url" : "http://www.gat.st/en/date/steirischer-herbst-2013-ausstellungseroeffnungen",
-                        "address" : "Sackstra??e 17, 8010 Graz, Austria",
-            
+                        "img": "img/thumbnails/ausstellung_steirischer.jpg",
+                        "address" : "Sackstr. 17, 8010 Graz, Austria",            
                         }
                     },
                      { "type" : "Feature",
@@ -161,6 +154,7 @@
                         "location" : "James Hockey Gallery, UCA Farnham",
                         "year" : "2014",
                         "url" : "http://www.ucreative.ac.uk/galleries/james-hockey/2014/gustav-metzger",
+                        "img": "img/thumbnails/james_hockey.jpg",
                         "address" : "University for the Creative Arts, Faulkner Road, Farnham, Surrey GU9 7DS",
             
                         }
@@ -175,6 +169,7 @@
                         "location" : "The Herbert Read Gallery",
                         "year" : "2014",
                         "url" : "http://www.ucreative.ac.uk/galleries/herbert-read/upcoming-exhibitions",
+                        "img": "img/thumbnails/herbert_read.jpg",
                         "address" : "Herbert Read Gallery UCA Canterbury New Dover Road Canterbury Kent CT1 3AN",
             
                         }
@@ -185,7 +180,7 @@
                 L.mapbox.accessToken = 'pk.eyJ1IjoiZ2FtZXJhIiwiYSI6IjNlclVnZDAifQ.a8PjkEfE5i2aOShPawCy1A';
                 var map = L.mapbox.map('map', 'extinctly.joke7gco', {
                     zoomControl: true,
-                }).setView([30,0], 3);
+                }).setView([40,10], 3);
             
             
             var site = {
@@ -217,7 +212,13 @@
             
             
             function onEachFeature(feature, featureLayer) {
-                featureLayer.bindPopup('<a href="'+ feature.properties.url +'" target="_blank"><h2>'+ feature.properties.name +'</h2></a><p>'+ feature.properties.location + ', ' + feature.properties.year +'</p>');
+                var popup = L.popup({
+                    closeButton: false
+                })
+                .setContent('<img src="'+ feature.properties.img +'" alt="'+ feature.properties.name +'"><div class="leaflet-text"><h2>'+ feature.properties.name +'</h2><p>'+ feature.properties.location + ', ' + feature.properties.year +'</p><p><a href="'+ feature.properties.url +'" target="_blank">LINK TO EXHIBITION</a></div>');
+
+
+                featureLayer.bindPopup(popup);
             }
             
             
@@ -236,6 +237,7 @@
                 </div>
             </div>
         </div>
+
         <!-- Extinct.ly analytics -->
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
