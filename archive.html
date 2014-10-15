@@ -18,7 +18,12 @@
 		<!--[if lt IE 9]>
 		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
+
+	    <link rel="stylesheet" href="css/jquery-ui-1.7.1.custom.css" type="text/css" media="screen" />
+	    <link rel="stylesheet" href="css/jquery.gzoom.css" type="text/css" media="screen" />
 		<link href="css/custom.css" rel="stylesheet">
+
+
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -50,8 +55,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-2 text-center">
-						<a href="index.html"><i class="fa fa-play fa-1x"></i></a>
-						<a href="map.html"><i class="fa fa-compass fa-1x"></i></a>
+						<a href="#"><i class="fa fa-play fa-1x"></i></a>
+						<a href="#"><i class="fa fa-compass fa-1x"></i></a>
 						<a href="" data-toggle="modal" data-target="#information"><i class="fa fa-info fa-1x"></i></a>
 					</div>
 					<div class="col-sm-2 col-sm-offset-3 text-center">
@@ -61,7 +66,7 @@
 			</div>
 		</div>
 
-		<div class="archive-images">
+		<div class="archive-images zoom" id="zoom01">
 			<img src="img/mm_01.jpg">
 			<img src="img/mm_01.jpg">
 		</div>
@@ -93,7 +98,10 @@
 		<!-- Placed at the end of the document so the pages load faster -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 		<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-		
+	    <script type="text/javascript" src="js/ui.core.min.js"></script>
+	    <script type="text/javascript" src="js/ui.slider.min.js"></script>
+	    <script type="text/javascript" src="js/jquery.mousewheel.js"></script> <!-- optional -->
+	    <script type="text/javascript" src="js/jquery.gzoom.js"></script>		
 
 		<!-- Extinct.ly analytics -->
 		<script>
@@ -117,6 +125,17 @@
 			);
 			ga('send', 'pageview');
 		</script>
+
+		<script>
+		$(function() {
+        $zoom = $("#zoom01").gzoom({
+            sW: 300,
+            sH: 225,
+            lW: 1400,
+            lH: 1050,
+            lighbox : false
+        });
+        </script>
 
 	</body>
 </html>
