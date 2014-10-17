@@ -139,7 +139,7 @@ i {
 }
 
 #countdown {
-	margin-top: 20%;
+	margin-top: 10%;
 	height: 100px;
 }
 
@@ -190,9 +190,22 @@ i {
 	height: 100%;
 }
 
+.about-text {
+	padding: 25px 0;
+}
+
+.landing-text {
+	padding: 100px 200px;
+}
 
 @media (max-width: 780px) {
     i {
     	margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+	.landing-text {
+    	padding: 0 200px;
     }
 }

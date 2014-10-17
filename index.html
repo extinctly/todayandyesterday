@@ -74,6 +74,10 @@
 			</div>-->
 
 		<div class="container text-center">
+			
+			<p class="landing-text">
+			<em>Mass Media: todayandyesterday.co.uk</em> is a special live transmission, streaming from Gustav Metzger’s exhibition <em>Facing Extinction</em> at Herbert Read Gallery, Canterbury, on the occasion of the <em>Extinction Marathon: Visions of the Future</em>.
+		</p>
 			<div id="countdown"></div>
 		</div>
 
@@ -86,7 +90,7 @@
 						<h2 class="modal-title" id="informationLabel">Information</h2>
 					</div>
 					<div class="modal-body">
-						...
+						Gustav Metzger’s first digital work <em>Mass Media: todayandyesterday.co.uk</em> has been co-commissioned by The Serpentine Galleries and The SPACE to coincide with the <em>Extinction Marathon: Visions of the Future</em>, which Metzger has both inspired and co-curated. Throughout the two day broadcast, students in Canterbury will be seen selecting from a stack of thousands of newspapers installed at the heart of the gallery space, cutting and collaging articles across the walls in response to the subject of EXTINCTION. The transmission highlights Metzger's work <em>Mass Media: Today and Yesterday</em> as an installation in a continual state of flux and growth.
 					</div>
 				</div>
 			</div>
@@ -121,36 +125,40 @@
 
 
 		<script type="text/javascript">
-		// set the date we're counting down to
-		var target_date = new Date("Oct 18, 2014").getTime();
+			// set the date we're counting down to
+			var target_date = new Date("Oct 18, 2014").getTime();
 
-		// variables for time units
-		var days, hours, minutes, seconds;
+			// variables for time units
+			var days, hours, minutes, seconds;
 
-		// get tag element
-		var countdown = document.getElementById("countdown");
+			// get tag element
+			var countdown = document.getElementById("countdown");
 
-		// update the tag with id "countdown" every 1 second
-		setInterval(function () {
+			// update the tag with id "countdown" every 1 second
+			setInterval(function () {
 
-		// find the amount of "seconds" between now and target
-		var current_date = new Date().getTime();
-		var seconds_left = (target_date - current_date) / 1000;
+			// find the amount of "seconds" between now and target
+			var offset = new Date().getTimezoneOffset();
+			var offset_seconds = offset * 60;
+			var current_date = new Date().getTime();
+			var seconds_left = (target_date - current_date) / 1000;
 
-		// do some time calculations
-		days = parseInt(seconds_left / 86400);
-		seconds_left = seconds_left % 86400;
+			// do some time calculations
+			days = parseInt(seconds_left / 86400);
+			seconds_left = seconds_left % 86400;
 
-		hours = parseInt(seconds_left / 3600);
-		seconds_left = seconds_left % 3600;
+			hours = parseInt(seconds_left / 3600);
+			seconds_left = seconds_left % 3600;
 
-		minutes = parseInt(seconds_left / 60);
-		seconds = parseInt(seconds_left % 60);
+			minutes = parseInt(seconds_left / 60);
+			seconds = parseInt(seconds_left % 60);
 
-		// format countdown string + set tag value
-		countdown.innerHTML = "<h2>" + days + " DAYS, " + hours + " HOURS AND "
-		+ minutes + " MINUTES</h2><br><h2>until the next Mass Media transmission.</h2>";
-		}, 1000);
+			// format countdown string + set tag value
+			countdown.innerHTML = "<h2>Next transmission commences in</h2><br><h2>" + days + " DAYS, " + hours + " HOURS AND "
+			+ minutes + " MINUTES</h2>.";
+			}, 1000);
+
+
 		</script>
 	</body>
 </html>
