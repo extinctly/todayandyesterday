@@ -151,13 +151,16 @@
 		    if(days == 1) {
 		    	var days_text = " DAY, ";
 		    }
+		    if(days == 0) {
+		    	var days_text = "";
+		    }
 		    if(hours == 1) {
 		    	var hours_text = " HOUR AND ";
 		    }
 		    if(minutes == 1) {
 		    	var minutes_text = " MINUTE</h2>";
 		    }
-		    document.getElementById('countdown').innerHTML = "<h2>Next transmission commences in<br>" + hours + days_text + hours + hours_text
+		    document.getElementById('countdown').innerHTML = "<h2>Next transmission commences in<br>" + days + days_text + hours + hours_text
 			+ minutes + minutes_text + '<h2><em>Mass Media: todayandyesterday.co.uk</em> is a special live transmission, streaming from Gustav Metzger’s exhibition <em>Facing Extinction</em> at Herbert Read Gallery, Canterbury, on the occasion of the <em>Extinction Marathon: Visions of the Future</em>.</h2>';
 		}
 
