@@ -73,11 +73,7 @@
 			</video>
 			</div>-->
 
-		<div class="container text-center">
-			
-			<h2 class="landing-text">
-			<em>Mass Media: todayandyesterday.co.uk</em> is a special live transmission, streaming from Gustav Metzger’s exhibition <em>Facing Extinction</em> at Herbert Read Gallery, Canterbury, on the occasion of the <em>Extinction Marathon: Visions of the Future</em>.
-			</h2>
+		<div class="container landing-text text-center">
 			<div id="countdown"></div>
 		</div>
 
@@ -87,7 +83,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-						<h2 class="modal-title" id="informationLabel">Mass Media: todayandyesterday.co.uk</h2>
+						<h2 class="modal-title" id="informationLabel"><em>Mass Media: todayandyesterday.co.uk</em></h2>
 					</div>
 					<div class="modal-body">
 						<p>
@@ -115,14 +111,6 @@
 		<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 		
 		<script src="js/packery.pkgd.min.js"></script>
-		<script>
-		var $container = $('#tay-packery');
-		// init
-		$container.packery({
-		  itemSelector: '.item',
-		  gutter: 0
-		});
-		</script>
 
 
 		<script>
@@ -137,45 +125,8 @@
 		</script>
 
 
-		<script type="text/javascript">
-			// set the date we're counting down to
-			var target_date = new Date("Oct 18, 2014").getTime();
-
-			// variables for time units
-			var days, hours, minutes, seconds;
-
-			// get tag element
-			var countdown = document.getElementById("countdown");
-
-			// update the tag with id "countdown" every 1 second
-			setInterval(function () {
-
-			// find the amount of "seconds" between now and target
-			var offset = new Date().getTimezoneOffset();
-			var offset_seconds = offset * 60;
-			var current_date = new Date().getTime();
-			var seconds_left = (target_date - current_date) / 1000;
-
-			// do some time calculations
-			days = parseInt(seconds_left / 86400);
-			seconds_left = seconds_left % 86400;
-
-			hours = parseInt(seconds_left / 3600);
-			seconds_left = seconds_left % 3600;
-
-			minutes = parseInt(seconds_left / 60);
-			seconds = parseInt(seconds_left % 60);
-
-			// format countdown string + set tag value
-			countdown.innerHTML = "<h2>Next transmission commences in<br>" + hours + " HOURS AND "
-			+ minutes + " MINUTES</h2>.";
-			}, 1000);
-
-
-		</script>
-
 		<script>
-		var end = new Date(Date.GMT(2014, 10, 18, 12, 0, 0));
+		var end = new Date(Date.UTC(2014, 9, 18, 12, 0, 0));
 
 		var _second = 1000;
 		var _minute = _second * 60;
@@ -183,21 +134,34 @@
 		var _day = _hour * 24;
 		var timer;
 
-		function getESTOffset() {
+		function getOffset() {
 
-		    return new Date().getTimezoneOffset() - (end.getTimezoneOffset())
+		    return new Date().getTimezoneOffset() - (end.getTimezoneOffset());
 		}
 
 		function showRemaining() {
 		    var now = new Date();
-		    var distance = end - now - getESTOffset() * _hour;
+		    var distance = end - now - getOffset() * _hour;
 		    var days = Math.floor(distance / _day);
 		    var hours = Math.floor((distance % _day) / _hour);
 		    var minutes = Math.floor((distance % _hour) / _minute);
 		    var seconds = Math.floor((distance % _minute) / _second);
 
-		    document.getElementById('countdown').innerHTML = "<h2>Next transmission commences in<br>" + hours + " HOURS AND "
-			+ minutes + " MINUTES</h2>.";
+		    var days_text = " DAYS, ";
+		    var hours_text = " HOURS AND ";
+		    var minutes_text = " MINUTES</h2>";
+
+		    if(days == 1) {
+		    	var days_text = " DAY, ";
+		    }
+		    if(hours == 1) {
+		    	var hours_text = " HOUR AND ";
+		    }
+		    if(minutes == 1) {
+		    	var minutes_text = " MINUTE</h2>";
+		    }
+		    document.getElementById('countdown').innerHTML = "<h2>Next transmission commences in<br>" + hours + days_text + hours + hours_text
+			+ minutes + minutes_text + '<h2><em>Mass Media: todayandyesterday.co.uk</em> is a special live transmission, streaming from Gustav Metzger’s exhibition <em>Facing Extinction</em> at Herbert Read Gallery, Canterbury, on the occasion of the <em>Extinction Marathon: Visions of the Future</em>.</h2>';
 		}
 
 		timer = setInterval(showRemaining, 1000);

@@ -122,6 +122,10 @@ i {
 	font-size: 12px;
 }
 
+.container {
+	width: 100%;
+}
+
 #map p {
 	font-size: 12px;
 }
@@ -210,11 +214,17 @@ i {
 }
 
 .about-text {
-	padding: 25px 0;
+	padding: 25px;
 }
 
 .landing-text {
-	padding: 50px 250px;
+	position: absolute;
+	padding: 0 200px;
+	top: 40%;
+}
+
+.landing-text h2 {
+	margin-top: 50px;
 }
 
 @media (max-width: 780px) {
@@ -225,6 +235,6 @@ i {
 
 @media (max-width: 500px) {
 	.landing-text {
-    	padding: 0 200px	;
+    	padding: 0 100px	;
     }
 }
